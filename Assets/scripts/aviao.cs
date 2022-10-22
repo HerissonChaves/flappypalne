@@ -5,6 +5,7 @@ using UnityEngine;
 public class aviao : MonoBehaviour {
 	// Use this for initialization
 	private Rigidbody2D fisica;
+	[SerializeField] private float impulso=10; // impulso do avião
 	private void Awake(){
 		this.fisica=this.GetComponent<Rigidbody2D>(); //instanciando a variavel fisica
 	}
@@ -19,7 +20,6 @@ public class aviao : MonoBehaviour {
 		}
 	}
 	void Impulsionar(){
-		int impulso = 10;
 		//addFo
 		this.fisica.AddForce(Vector2.up*impulso,ForceMode2D.Impulse); //adicionando força impulsiva para o vetor up
 	}
